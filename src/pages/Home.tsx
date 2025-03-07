@@ -34,8 +34,59 @@ const Home: React.FC = () => {
         <div className="h-64 md:h-150 w-1/2 bg-[url('images/coffee_2.png')] bg-cover bg-center"></div>
       </div>
 
-      <div id="about" className="mt-10"></div>
-      <div id="reservations"></div>
+      <div
+        id="about"
+        className="mt-32 flex flex-col justify-center items-center"
+      >
+        <h4 className="text-black text-lg mb-4 font-bold">
+          Lorem ipsum dolor sit amet consectetur.
+        </h4>
+        <p className="text-black w-3/4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          nihil iste, magnam tenetur et aliquid neque consequuntur earum fuga.
+          Quibusdam vel similique hic nemo ipsum, reiciendis eos magnam
+          voluptatibus dicta!
+        </p>
+      </div>
+
+      <div id="reservations" className="mt-32 flex justify-center items-center">
+        <div className="bg-red-500 w-[95%] flex flex-col items-center py-24">
+          <h4 className="text-black text-xl mb-4 font-bold">reservations</h4>
+          <p>book a table or join the waitlist</p>
+          <div className="flex w-4/5 mt-2">
+            <div className="w-1/4 bg-gray-400 py-3"># people</div>
+            <div className="w-1/4 bg-gray-600 py-3">date</div>
+            <div className="w-1/4 bg-gray-400 py-3">time</div>
+            <div className="w-1/4 bg-gray-500 py-3">find table</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="reviews" className="mt-32 flex justify-center">
+        <div className="flex w-[95%] text-black">
+          <div
+            id="review1"
+            className="border border-red-500 border-r-0 rounded-tl-md rounded-bl-md px-4 py-12"
+          >
+            <h5>organization 1</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div
+            id="review2"
+            className="border border-red-500 border-r-0 px-4 py-12"
+          >
+            <h5>organization 1</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div
+            id="review3"
+            className="border border-red-500 rounded-tr-md rounded-br-md px-4 py-12"
+          >
+            <h5>organization 1</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
