@@ -2,12 +2,7 @@ import React from "react";
 
 const Home: React.FC = () => {
   return (
-    <div className="w-full overflow-hidden">
-      <div className="heading">
-        <div id="menu-dropdown"></div>
-        <h1 className="mt-3">cafe grenouille</h1>
-      </div>
-
+    <div className="w-full overflow-hidden p-2">
       <div>
         <div className="h-64 md:h-150 bg-[url('images/cafe_landing.jpg')] bg-cover bg-center mt-3"></div>
       </div>
