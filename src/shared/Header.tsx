@@ -7,7 +7,9 @@ const Header: React.FC = () => {
       <div id="menu-dropdown" className="absolute left-4 top-3">
         <MenuSidebar />
       </div>
-      <h1 className="my-4 text-black text-xl font-medium">cafe grenouille</h1>
+      <h1 className="my-4 text-black text-xl font-medium hover:text-(--green-accent)">
+        <a href="/">cafe grenouille</a>
+      </h1>
     </div>
   );
 };
