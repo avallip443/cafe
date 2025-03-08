@@ -1,5 +1,5 @@
 import React from "react";
-import MenuSidebar from "../components/menu_bar/MenuBar";
+import MenuSidebar from "../components/menu_bar/MenuSidebar";
 
 const Header: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const Header: React.FC = () => {
       <div id="menu-dropdown" className="absolute left-4 top-3">
         <MenuSidebar />
       </div>
-      <h1 className="my-4 text-black text-xl font-medium hover:text-(--green-accent)">
+      <h1 className="my-3 md:my-4 text-md md:text-xl font-medium text-black hover:text-(--green-accent)">
         <a href="/">cafe grenouille</a>
       </h1>
     </div>
