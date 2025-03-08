@@ -2,10 +2,8 @@ import React from "react";
 
 const Home: React.FC = () => {
   return (
-    <div className="w-full overflow-hidden p-2">
-      <div>
-        <div className="h-64 md:h-150 bg-[url('images/cafe_landing.jpg')] bg-cover bg-center mt-3"></div>
-      </div>
+    <div className="w-full overflow-hidden p-2 pt-0">
+      <div id="landing-image" className="h-64 md:h-150 bg-[url('images/cafe_landing.jpg')] bg-cover bg-center"></div>
 
       <div id="menu" className="mt-10 flex justify-between items-center gap-4">
         <div className="h-64 md:h-150 w-1/2 bg-[url('images/coffee_1.png')] bg-cover bg-center"></div>
