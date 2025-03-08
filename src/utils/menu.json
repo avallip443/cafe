@@ -1,0 +1,205 @@
+{
+  "brunch": [
+    {
+      "times": "tuesday-sunday 10am–2pm",
+      "starters": [
+        {
+          "name": "fresh baked pastry basket",
+          "diet": "vegetarian",
+          "description": "assorted croissants, danishes, and muffins, served with house-made jam and cultured butter",
+          "price": 9
+        },
+        {
+          "name": "avocado toast",
+          "diet": "vegetarian",
+          "description": "smashed avocado, cherry tomatoes, radish, microgreens, poached egg, toasted sourdough",
+          "price": 14
+        },
+        {
+          "name": "greek yogurt parfait",
+          "diet": "vegetarian",
+          "description": "house-made granola, seasonal berries, wildflower honey",
+          "price": 12
+        }
+      ],
+      "salads": [
+        {
+          "name": "classic caesar",
+          "diet": "vegetarian",
+          "description": "crisp romaine, parmesan, garlic croutons, creamy caesar dressing",
+          "price": 14
+        },
+        {
+          "name": "spring greens salad",
+          "diet": "vegetarian, vegan option available",
+          "description": "baby greens, cucumbers, goat cheese, toasted almonds, citrus vinaigrette",
+          "price": 15
+        },
+        {
+          "name": "protein power bowl",
+          "diet": "vegetarian",
+          "description": "quinoa, roasted sweet potatoes, pickled onions, avocado, poached egg, lemon tahini dressing",
+          "price": 17,
+          "add_ons": {
+            "smoked salmon": 6
+          }
+        }
+      ],
+      "mains": [
+        {
+          "name": "brioche french toast",
+          "diet": "vegetarian",
+          "description": "vanilla bean custard, maple syrup, macerated berries, chantilly cream",
+          "price": 16
+        },
+        {
+          "name": "classic eggs benedict",
+          "diet": "",
+          "description": "poached eggs, canadian bacon, hollandaise, english muffin, breakfast potatoes",
+          "price": 18
+        },
+        {
+          "name": "veggie omelette",
+          "diet": "vegetarian",
+          "description": "spinach, mushrooms, goat cheese, served with mixed greens and toast",
+          "price": 16
+        },
+        {
+          "name": "steak & eggs",
+          "diet": "",
+          "description": "grilled hanger steak, two eggs any style, herb butter, breakfast potatoes",
+          "price": 26
+        }
+      ],
+      "sides": [
+        { "name": "breakfast potatoes", "diet": "vegatarian", "price": 6 },
+        { "name": "seasonal fruit", "diet": "vegetarian", "price": 7 },
+        { "name": "applewood smoked bacon", "diet": "", "price": 7 },
+        { "name": "avocado half", "diet": "vegetarian", "price": 4 },
+        { "name": "toast with butter & jam", "diet": "vegetarian", "price": 5 }
+      ]
+    }
+  ],
+  "pastries": [
+    {
+      "name": "butter croissant",
+      "diet": "vegetarian",
+      "description": "flaky, buttery croissant made fresh daily",
+      "price": 5
+    },
+    {
+      "name": "chocolate croissant",
+      "diet": "vegetarian",
+      "description": "classic croissant filled with rich dark chocolate",
+      "price": 6
+    },
+    {
+      "name": "almond croissant",
+      "diet": "vegetarian",
+      "description": "buttery croissant with almond cream and toasted almonds",
+      "price": 6
+    },
+    {
+      "name": "morning bun",
+      "diet": "vegetarian",
+      "description": "cinnamon-sugar laminated pastry with a citrus glaze",
+      "price": 5
+    },
+    {
+      "name": "seasonal danish",
+      "diet": "vegetarian",
+      "description": "flaky pastry filled with seasonal fruit and pastry cream",
+      "price": 6
+    },
+    {
+      "name": "scone",
+      "diet": "vegetarian",
+      "description": "house-made scone with clotted cream and jam",
+      "price": 5
+    }
+  ],
+  "drinks": [
+    {
+      "name": "espresso",
+      "description": "rich, smooth shot of espresso",
+      "price": 3.5
+    },
+    {
+      "name": "americano",
+      "description": "espresso with hot water for a smooth, bold coffee",
+      "price": 4
+    },
+    {
+      "name": "cappuccino",
+      "description": "espresso with steamed milk and velvety foam",
+      "price": 5
+    },
+    {
+      "name": "latte",
+      "description": "espresso with steamed milk and a touch of foam",
+      "price": 5.5,
+      "milk_options": ["whole milk", "oat milk", "almond milk", "soy milk"]
+    },
+    {
+      "name": "mocha",
+      "description": "espresso, steamed milk, dark chocolate, whipped cream",
+      "price": 6
+    },
+    {
+      "name": "flat White",
+      "description": "smooth espresso with silky steamed milk",
+      "price": 5
+    },
+    {
+      "name": "macchiato",
+      "description": "espresso with a dollop of frothy milk",
+      "price": 4
+    },
+    {
+      "name": "matcha latte",
+      "description": "ceremonial-grade matcha with steamed milk",
+      "price": 6,
+      "milk_options": ["whole milk", "oat milk", "almond milk", "soy milk"]
+    },
+    {
+      "name": "chai latte",
+      "description": "spiced chai tea with steamed milk and honey",
+      "price": 5.5
+    },
+    {
+      "name": "hot chocolate",
+      "description": "rich, velvety chocolate with steamed milk and whipped cream",
+      "price": 5
+    },
+    {
+      "name": "drip coffee",
+      "description": "freshly brewed single-origin coffee",
+      "price": 3.5
+    },
+    {
+      "name": "cold brew",
+      "description": "smooth, slow-steeped coffee over ice",
+      "price": 5
+    },
+    {
+      "name": "iced latte",
+      "description": "chilled espresso with milk over ice",
+      "price": 5.5
+    },
+    {
+      "name": "iced matcha latte",
+      "description": "chilled matcha with milk over ice",
+      "price": 6
+    },
+    {
+      "name": "iced chai latte",
+      "description": "chilled spiced chai with milk over ice",
+      "price": 5.5
+    },
+    {
+      "name": "tea selection",
+      "description": "assorted loose-leaf teas: earl grey, english breakfast, green, peppermint, chamomile",
+      "price": 4
+    }
+  ]
+}
