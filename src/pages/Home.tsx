@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex % 3) + 1);
       }, 100);
-    }, 8000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -26,7 +26,12 @@ const Home: React.FC = () => {
           id="menu"
           className="mt-4 md:mt-16 sm:w-full flex flex-col-reverse md:flex-row justify-between items-center gap-2"
         >
-          <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-[url('images/coffee_1.png')] bg-cover bg-center"></div>
+          <div
+            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-cover bg-center"
+            style={{
+              backgroundImage: `url(/images/brunch_${currentIndex}.png)`,
+            }}
+          ></div>
           <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--green) text-black flex flex-col justify-center items-center p-12">
             <h5 className="text-xl md:text-2xl font-semibold mb-6">
               cafe grenouille
@@ -56,7 +61,12 @@ const Home: React.FC = () => {
               view our cafe and brunch menu
             </a>
           </div>
-          <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-[url('images/coffee_2.png')] bg-cover bg-center"></div>
+          <div
+            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-cover bg-center"
+            style={{
+              backgroundImage: `url(/images/coffee_${currentIndex}.png)`,
+            }}
+          ></div>
         </div>
 
         <div
