@@ -24,7 +24,7 @@ const Home: React.FC = () => {
 
         <div
           id="menu"
-          className="mt-4 md:mt-16 sm:w-full flex flex-col-reverse md:flex-row justify-between items-center gap-4"
+          className="mt-4 md:mt-16 sm:w-full flex flex-col-reverse md:flex-row justify-between items-center gap-2"
         >
           <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-[url('images/coffee_1.png')] bg-cover bg-center"></div>
           <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--green) text-black flex flex-col justify-center items-center p-12">
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
 
         <div
           id="hours"
-          className="mt-4 md:mt-16 sm:w-full flex flex-col md:flex-row justify-between items-center gap-4"
+          className="mt-4 md:mt-16 sm:w-full flex flex-col md:flex-row justify-between items-center gap-2"
         >
           <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--yellow) text-black flex flex-col justify-center items-center p-12">
             <h5 className="text-xl md:text-2xl font-semibold mb-6">menu</h5>
@@ -78,35 +78,32 @@ const Home: React.FC = () => {
         <Reservations />
 
         <div id="reviews" className="mt-16 md:mt-32 justify-center md:flex">
-          <div className="flex flex-col md:flex-row text-black">
-            <div className="md:w-1/3 flex flex-col items-center border border-(--green-accent) md:border-r-0 rounded-tl-2xl rounded-tr-2xl md:rounded-tr-none md:rounded-bl-2xl px-4 py-6 md:py-12 hover:border-none hover:bg-(--yellow)">
-              <img src="/logos/toronto-life-logo.svg" className="mb-4 w-24 md:w-32" />
-              <p className="text-sm md:text-base">
-                "Cafe Grenouille is an absolute gem in the heart of Toronto...
-                the aroma and rich food transports you straight to the tables of
-                Paris!"
+          <div className="flex flex-col md:flex-row text-black h-56">
+            <div className="md:w-1/3 flex flex-col items-center justify-between text-(--green-accent) hover:text-black border border-(--green-accent) md:border-r-0 rounded-tl-2xl rounded-tr-2xl md:rounded-tr-none md:rounded-bl-2xl px-4 py-6 md:py-12 hover:bg-(--yellow)">
+              <p className="text-sm md:text-lg font-semibold">
+                "Cafe Grenouille is an absolute gem in the heart of Toronto!"
               </p>
+              <img
+                src="/logos/toronto-life-logo.svg"
+                className="mt-4 w-24 md:w-22"
+              />
             </div>
 
-            <div className="md:w-1/3 flex flex-col items-center border border-(--green-accent) md:border-r-0 px-4 py-6 md:py-12 hover:border-none hover:bg-(--yellow)">
+            <div className="md:w-1/3 flex flex-col items-center justify-between text-(--green-accent) hover:text-black border border-(--green-accent) md:border-r-0 px-4 py-6 md:py-12 hover:bg-(--yellow)">
+              <p className="text-sm md:text-lg font-semibold">
+                "For coffee lovers and brunch enthusiasts alike!"
+              </p>
               <img
                 src="/logos/the-globe-and-mail-logo.svg"
-                className="mb-4 h-4 md:h-6"
+                className="mt-4 h-4 md:h-4"
               />
-              <p className="text-sm md:text-base">
-                "It’s rare to find a café that truly masters both coffee and
-                cuisine, but Cafe Grenouille does exactly that. Highly recommend
-                for coffee lovers and brunch enthusiasts alike!"
-              </p>
             </div>
 
-            <div className="md:w-1/3 flex flex-col items-center border border-(--green-accent) md:rounded-tr-2xl rounded-br-2xl rounded-bl-2xl md:rounded-bl-none px-4 py-6 md:py-12 hover:border-none hover:bg-(--yellow)">
-              <img src="/logos/blogto-logo.svg" className="mb-4 w-24 md:w-32" />
-              <p className="text-sm md:text-base">
-                "Cafe Grenouille is redefining brunch with its take on French
-                classics. Whether you're a local or just visiting, this café
-                deserves a top spot on your bucket list!"
+            <div className="md:w-1/3 flex flex-col items-center justify-between text-(--green-accent) hover:text-black border border-(--green-accent) md:rounded-tr-2xl rounded-br-2xl rounded-bl-2xl md:rounded-bl-none px-4 py-6 md:py-12 hover:bg-(--yellow)">
+              <p className="text-sm md:text-lg font-semibold">
+                "This café deserves a top spot on your bucket list!"
               </p>
+              <img src="/logos/blogto-logo.svg" className="mt-4 w-24 md:w-22" />
             </div>
           </div>
         </div>
