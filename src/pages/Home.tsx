@@ -1,79 +1,113 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Reservations from "../components/reservations/Reservations";
 
 const Home: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex % 3) + 1);
+      }, 100);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="w-full overflow-hidden p-2 pt-0">
-      <div
-        id="landing-image"
-        className="h-64 md:h-150 bg-[url('images/cafe_landing.jpg')] bg-cover bg-center"
-      ></div>
+    <div className="w-full overflow-hidden p-4 pt-0 flex justify-center">
+      <div className="max-w-7xl flex flex-col items-center justify-center">
+        <div
+          id="landing-image"
+          className="w-[88vw] md:w-full h-64 md:h-148 bg-cover bg-center bg-[url('images/cafe_landing1.jpg')]"
+        ></div>
 
-      <div id="menu" className="mt-10 flex justify-between items-center gap-4">
-        <div className="h-64 md:h-150 w-1/2 bg-[url('images/coffee_1.png')] bg-cover bg-center"></div>
-        <div className="h-64 md:h-150 w-1/2 bg-(--green) text-black flex flex-col justify-center items-center">
-          <h5 className="text-3xl font-bold mb-6">cafe grenouille</h5>
-          <p className="mb-4">123 react rd, toronto, canada</p>
-          <p className="font-semibold">tuesday-sunday, 8am-4pm</p>
+        <div
+          id="menu"
+          className="mt-4 md:mt-16 sm:w-full flex flex-col-reverse md:flex-row justify-between items-center gap-4"
+        >
+          <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-[url('images/coffee_1.png')] bg-cover bg-center"></div>
+          <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--green) text-black flex flex-col justify-center items-center p-12">
+            <h5 className="text-xl md:text-2xl font-semibold mb-6">
+              cafe grenouille
+            </h5>
+            <p className="mb-4 text-sm md:text-lg">
+              123 react rd, toronto, canada
+            </p>
+            <p className="font-medium underline text-sm md:text-lg">
+              tuesday to sunday, 8am-4pm
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div id="hours" className="mt-10 flex justify-between items-center gap-4">
-        <div className="h-64 md:h-150 w-1/2 bg-(--yellow) text-black flex flex-col justify-center items-center">
-          <h5 className="text-3xl font-bold mb-6">menu</h5>
-          <p className="mb-4">
-            visit us in person and discover our weekly special!
+        <div
+          id="hours"
+          className="mt-4 md:mt-16 sm:w-full flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--yellow) text-black flex flex-col justify-center items-center p-12">
+            <h5 className="text-xl md:text-2xl font-semibold mb-6">menu</h5>
+            <p className="mb-4 text-sm md:text-lg">
+              visit us in person and discover our weekly special!
+            </p>
+            <a
+              href="/menu"
+              className="underline font-medium hover:font-bold text-sm md:text-lg"
+            >
+              view our cafe and brunch menu
+            </a>
+          </div>
+          <div className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-[url('images/coffee_2.png')] bg-cover bg-center"></div>
+        </div>
+
+        <div
+          id="about"
+          className="mt-16 md:mt-32 flex flex-col justify-center items-center"
+        >
+          <h4 className="text-(--beige) text-lg md:text-xl mb-4 w-72 md:w-92 py-2 font-bold bg-(--green-accent)">
+            parisan brunch and cafe
+          </h4>
+          <p className="text-black text-sm md:text-lg w-[86vw] md:w-3/4">
+            Welcome to Cafe Grenouille, a charming French eatery in the heart of
+            Toronto. We proudly serve everything from delicious pastries, richly
+            crafted coffee, and classic brunch dishes. With locally sourced
+            ingredients and a passion for great food, our cafe brings the rich
+            flavours of Paris right to your table!
           </p>
-          <a href="/menu" className="underline font-semibold hover:font-bold">
-            view our cafe and brunch menu
-          </a>
         </div>
-        <div className="h-64 md:h-150 w-1/2 bg-[url('images/coffee_2.png')] bg-cover bg-center"></div>
-      </div>
 
-      <div
-        id="about"
-        className="mt-32 flex flex-col justify-center items-center"
-      >
-        <h4 className="text-black text-xl mb-4 font-bold hover:text-(--green-accent)">
-          Parisan brunch and cafe
-        </h4>
-        <p className="text-black w-3/4">
-          Welcome to Cafe Grenouille, a charming French eatery in the heart of
-          Toronto. We proudly serve everything from delicious pastries, richly
-          crafted coffee, and classic brunch dishes. With locally sourced
-          ingredients and a passion for great food, our cafe brings the rich
-          flavours of Paris right to your table!
-        </p>
-      </div>
+        <Reservations />
 
-      <Reservations />
+        <div id="reviews" className="mt-16 md:mt-32 justify-center md:flex">
+          <div className="flex flex-col md:flex-row text-black">
+            <div className="md:w-1/3 flex flex-col items-center border border-(--green-accent) md:border-r-0 rounded-tl-2xl rounded-tr-2xl md:rounded-tr-none md:rounded-bl-2xl px-4 py-6 md:py-12 hover:border-none hover:bg-(--yellow)">
+              <img src="/logos/toronto-life-logo.svg" className="mb-4 w-24 md:w-32" />
+              <p className="text-sm md:text-base">
+                "Cafe Grenouille is an absolute gem in the heart of Toronto...
+                the aroma and rich food transports you straight to the tables of
+                Paris!"
+              </p>
+            </div>
 
-      <div id="reviews" className="mt-32 flex justify-center">
-        <div className="flex w-[95%] text-black">
-          <div className="w-1/3 border-2 border-(--green-accent) border-r-0 rounded-tl-2xl rounded-bl-2xl px-4 py-12 hover:border-none hover:bg-(--green-accent) hover:text-(--beige)">
-            <h5 className="text-lg font-semibold mb-3">Toronto Star</h5>
-            <p>
-              "Cafe Grenouille is an absolute gem in the heart of Toronto... the
-              aroma and rich food transports you straight to the tables of
-              Paris!"
-            </p>
-          </div>
-          <div className="w-1/3 border-2 border-(--green-accent) border-r-0 px-4 py-12 hover:border-none hover:bg-(--green-accent) hover:text-(--beige)">
-            <h5 className="text-lg font-semibold mb-3">BlogTO</h5>
-            <p>
-             "It’s rare to find a café that truly masters both coffee and
-              cuisine, but Cafe Grenouille does exactly that. Highly recommend
-              for coffee lovers and brunch enthusiasts alike!"
-            </p>
-          </div>
-          <div className="w-1/3 border-2 border-(--green-accent) rounded-tr-2xl rounded-br-2xl px-4 py-12 hover:border-none hover:bg-(--green-accent) hover:text-(--beige)">
-            <h5 className="text-lg font-semibold mb-3">Toronto Life</h5>
-            <p>
-              "Cafe Grenouille is redefining brunch with its take on
-              French classics. Whether you're a local or just visiting, this
-              café deserves a top spot on your bucket list!"
-            </p>
+            <div className="md:w-1/3 flex flex-col items-center border border-(--green-accent) md:border-r-0 px-4 py-6 md:py-12 hover:border-none hover:bg-(--yellow)">
+              <img
+                src="/logos/the-globe-and-mail-logo.svg"
+                className="mb-4 h-4 md:h-6"
+              />
+              <p className="text-sm md:text-base">
+                "It’s rare to find a café that truly masters both coffee and
+                cuisine, but Cafe Grenouille does exactly that. Highly recommend
+                for coffee lovers and brunch enthusiasts alike!"
+              </p>
+            </div>
+
+            <div className="md:w-1/3 flex flex-col items-center border border-(--green-accent) md:rounded-tr-2xl rounded-br-2xl rounded-bl-2xl md:rounded-bl-none px-4 py-6 md:py-12 hover:border-none hover:bg-(--yellow)">
+              <img src="/logos/blogto-logo.svg" className="mb-4 w-24 md:w-32" />
+              <p className="text-sm md:text-base">
+                "Cafe Grenouille is redefining brunch with its take on French
+                classics. Whether you're a local or just visiting, this café
+                deserves a top spot on your bucket list!"
+              </p>
+            </div>
           </div>
         </div>
       </div>
