@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <div className="w-full p-4 flex justify-center">
       <div className="max-w-7xl flex flex-col items-center justify-center">
         <motion.h1
-          className="text-2xl md:text-4xl text-black mb-2 md:mb-4 px-4"
+          className="text-2xl md:text-4xl text-black px-12 py-3 bg-(--green)"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -27,7 +27,7 @@ const About: React.FC = () => {
 
         <motion.div
           id="landing-image"
-          className="w-[88vw] md:w-full h-64 md:h-118 mt-4 bg-cover bg-center bg-[url('images/cafe_landing1.jpg')]"
+          className="w-[88vw] md:w-full h-64 md:h-118 mt-3 bg-cover bg-center bg-[url('images/cafe_landing1.jpg')]"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
