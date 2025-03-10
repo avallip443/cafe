@@ -2,8 +2,8 @@ import React from "react";
 
 const NotFound: React.FC = () => {
   return (
-    <div>
-        <p>page not found</p>
+    <div className="h-screen">
+        <p className="text-black text-3xl py-16">page not found</p>
     </div>
   )
 }
