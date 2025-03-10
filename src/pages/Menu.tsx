@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import MenuList from "../utils/menu.json";
 
 type MenuItem = {
@@ -21,7 +22,6 @@ const Menu = () => {
         src="/designs/croissant_decal.png"
         className="absolute top-350 right-8 -translate-y-1/2 -z-10 w-64 md:w-80"
       />
-
       <img
         src="/designs/people_decal.png"
         className="absolute top-700 left-3 -z-10 w-96"
@@ -34,32 +34,15 @@ const Menu = () => {
         <div key={index}>
           <p className="italic text-gray-600 mb-2">{section.times}</p>
 
-          <h2 className="text-lg md:text-2xl font-semibold mt-5 text-(--green-accent)">
-            starters
-          </h2>
-          {section.starters.map((item, idx) => (
-            <MenuItemCard key={idx} item={item} />
-          ))}
-
-          <h2 className="text-lg md:text-2xl font-semibold mt-5 text-(--green-accent)">
-            salads
-          </h2>
-          {section.salads.map((item, idx) => (
-            <MenuItemCard key={idx} item={item} />
-          ))}
-
-          <h2 className="text-lg md:text-2xl font-semibold mt-5 text-(--green-accent)">
-            mains
-          </h2>
-          {section.mains.map((item, idx) => (
-            <MenuItemCard key={idx} item={item} />
-          ))}
-
-          <h2 className="text-lg md:text-2xl font-semibold mt-5 text-(--green-accent)">
-            sides
-          </h2>
-          {section.sides.map((item, idx) => (
-            <MenuItemCard key={idx} item={item} />
+          {["starters", "salads", "mains", "sides"].map((category) => (
+            <div key={category}>
+              <h2 className="text-lg md:text-2xl font-semibold mt-5 text-(--green-accent)">
+                {category}
+              </h2>
+              {section[category].map((item: MenuItem, idx: number) => (
+                <MenuItemCard key={idx} item={item} />
+              ))}
+            </div>
           ))}
         </div>
       ))}
@@ -90,7 +73,13 @@ const Menu = () => {
 };
 
 const MenuItemCard = ({ item }: { item: MenuItem }) => (
-  <div className="pt-2">
+  <motion.div
+    className="pt-2"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true }}
+  >
     <h3 className="text-sm md:text-lg font-medium text-black mt-2">
       {item.name} - ${item.price}
     </h3>
@@ -111,7 +100,7 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => (
           .join(", ")}
       </p>
     )}
-  </div>
+  </motion.div>
 );
 
 export default Menu;
