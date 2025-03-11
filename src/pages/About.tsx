@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const About: React.FC = () => {
   return (
-    <div className="w-full p-4 flex justify-center">
+    <div className="w-full mt-12 p-4 flex justify-center">
       <div className="max-w-7xl flex flex-col items-center justify-center">
         <motion.h1
-          className="text-2xl md:text-4xl text-black px-12 py-3 bg-(--green)"
+          className="text-2xl md:text-4xl text-black px-12 py-3 bg-(--green) rounded-2xl"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -27,7 +27,7 @@ const About: React.FC = () => {
 
         <motion.div
           id="landing-image"
-          className="w-[88vw] md:w-full h-64 md:h-118 mt-3 bg-cover bg-center bg-[url('images/cafe_landing1.jpg')]"
+          className="w-[88vw] md:w-full h-64 md:h-120 mt-3 bg-cover bg-center bg-[url('images/cafe_landing1.jpg')] rounded-2xl"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -36,7 +36,7 @@ const About: React.FC = () => {
 
         <div className="mt-4 md:mt-16 sm:w-full flex flex-col md:flex-row justify-between items-center gap-4">
           <motion.div
-            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--yellow) text-black flex flex-col justify-center items-center p-8 md:p-12"
+            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--yellow) text-black flex flex-col justify-center items-center p-8 md:p-12 rounded-2xl"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
@@ -49,7 +49,7 @@ const About: React.FC = () => {
           </motion.div>
 
           <motion.div
-            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-cover bg-center"
+            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-cover bg-center rounded-2xl"
             style={{
               backgroundImage: `url(/images/coffee_1.png)`,
             }}
@@ -68,7 +68,7 @@ const About: React.FC = () => {
           viewport={{ once: true }}
         >
           <motion.h4
-            className="text-(--beige) text-lg md:text-xl mb-4 w-70 md:w-92 py-2 font-bold bg-(--green-accent)"
+            className="text-(--beige) text-lg md:text-2xl mb-4 w-70 md:w-100 py-2 font-medium bg-(--green-accent) rounded-xl"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
