@@ -10,6 +10,14 @@ type MenuItem = {
   milk_options?: string[];
 };
 
+type MenuSection = {
+  times: string;
+  starters: MenuItem[];
+  salads: MenuItem[];
+  mains: MenuItem[];
+  sides: MenuItem[];
+};
+
 const Menu = () => {
   return (
     <div className="p-6 mt-12 max-w-3xl mx-auto">
@@ -33,7 +41,7 @@ const Menu = () => {
         <div key={index}>
           <p className="italic text-gray-600 mb-2">{section.times}</p>
 
-          {(["starters", "salads", "mains", "sides"] as Array<keyof typeof section>).map(
+          {(["starters", "salads", "mains", "sides"] as Array<keyof MenuSection>).map(
             (category) => (
             <div key={category}>
               <h2 className="text-lg md:text-2xl font-semibold mt-5 text-(--green-accent)">
