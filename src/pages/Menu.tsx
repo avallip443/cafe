@@ -10,15 +10,25 @@ type MenuItem = {
   milk_options?: string[];
 };
 
-type MenuSection = {
-  times: string;
+type BrunchSection = {
   starters: MenuItem[];
   salads: MenuItem[];
   mains: MenuItem[];
   sides: MenuItem[];
 };
 
+type Menu = {
+  brunch: BrunchSection[];
+  pastries: MenuItem[];
+  drinks: MenuItem[];
+};
+
+type BrunchCategory = keyof BrunchSection;
+const categories: BrunchCategory[] = ["starters", "salads", "mains", "sides"];
+
 const Menu = () => {
+  const typedMenuList = MenuList as Menu;
+
   return (
     <div className="p-6 mt-12 max-w-3xl mx-auto">
       <img
@@ -37,17 +47,15 @@ const Menu = () => {
       <h1 className="text-xl md:text-3xl font-bold mb-4 py-2 bg-(--yellow) text-black rounded-2xl">
         brunch
       </h1>
-      {MenuList.brunch.map((section, index) => (
+      <p className="italic text-gray-600 mb-2">tuesday-sunday 10am–2pm</p>
+      {typedMenuList.brunch.map((section, index) => (
         <div key={index}>
-          <p className="italic text-gray-600 mb-2">{section.times}</p>
-
-          {(["starters", "salads", "mains", "sides"] as Array<keyof MenuSection>).map(
-            (category) => (
+          {categories.map((category) => (
             <div key={category}>
               <h2 className="text-lg md:text-2xl font-semibold mt-5 text-(--green-accent)">
                 {category}
               </h2>
-              {section[category].map((item: MenuItem, idx: number) => (
+              {section[category].map((item, idx) => (
                 <MenuItemCard key={idx} item={item} />
               ))}
             </div>
@@ -58,14 +66,14 @@ const Menu = () => {
       <h1 className="text-xl md:text-3xl font-bold mt-8 py-2 bg-(--yellow) text-black rounded-2xl">
         pastries
       </h1>
-      {MenuList.pastries.map((item, idx) => (
+      {typedMenuList.pastries.map((item, idx) => (
         <MenuItemCard key={idx} item={item} />
       ))}
 
       <h1 className="text-xl md:text-3xl font-bold mt-8 py-2 bg-(--yellow) text-black rounded-2xl">
         drinks
       </h1>
-      {MenuList.drinks.map((item, idx) => (
+      {typedMenuList.drinks.map((item, idx) => (
         <MenuItemCard key={idx} item={item} />
       ))}
 
