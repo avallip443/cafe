@@ -25,7 +25,7 @@ const Home: React.FC = () => {
           transition={{ duration: 1 }}
         >
           <motion.p
-            className="w-55 md:w-200 text-xl md:text-7xl bg-(--dark-green)/90 pr-6 md:pr-12 py-2 md:py-5 rounded-l-lg"
+            className="w-70 md:w-200 text-2xl md:text-7xl bg-(--dark-green)/90 pr-6 md:pr-12 py-2 md:py-5 rounded-l-lg"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
             cafe grenouille
           </motion.p>
           <motion.p
-            className="w-2/3 md:w-full text-xs md:text-3xl text-right mt-2 md:mt-4 mr-2 md:mr-12"
+            className="w-3/4 md:w-full text-md md:text-3xl text-right mt-2 md:mt-4 mr-10 md:mr-12"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--green) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
+            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--off-white) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
