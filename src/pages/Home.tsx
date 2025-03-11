@@ -19,7 +19,7 @@ const Home: React.FC = () => {
       <div className="max-w-6xl flex flex-col items-center justify-center">
         <motion.div
           id="landing-image"
-          className="w-screen h-82 md:h-screen bg-cover bg-center bg-[url('images/cafe_landing1.jpg')] flex flex-col justify-end items-end pb-4 md:pb-16"
+          className="w-screen h-82 md:h-screen bg-cover bg-center bg-[url('/images/cafe_landing1.jpg')] flex flex-col justify-end items-end pb-4 md:pb-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
