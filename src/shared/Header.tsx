@@ -25,7 +25,7 @@ const Header: React.FC = () => {
       className={`fixed w-full top-0 z-50 bg-black/40 flex justify-center transition-transform duration-300 shadow-md 
         ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
-      <div className="w-full flex justify-between items-center py-1 px-6">
+      <div className="w-full flex justify-between items-center py-2 px-6">
         <div>
           <Bars3Icon
             className="w-6 md:w-8"

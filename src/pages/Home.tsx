@@ -15,17 +15,17 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden p-4 pt-0 flex justify-center">
+    <div className="w-full p-4 pt-0 flex justify-center overflow-hidden">
       <div className="max-w-6xl flex flex-col items-center justify-center">
         <motion.div
           id="landing-image"
-          className="w-screen h-82 md:h-screen bg-cover bg-center bg-[url('/images/cafe_landing1.jpg')] flex flex-col justify-end items-end pb-4 md:pb-16"
+          className="w-screen h-82 md:h-screen flex flex-col justify-end items-end bg-cover bg-center bg-[url('/images/cafe_landing1.jpg')] pb-4 md:pb-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
           <motion.p
-            className="text-xl md:text-7xl bg-(--green-accent)/60 w-55 md:w-200 pr-6 md:pr-12 py-2 md:py-5 rounded-l-lg"
+            className="w-55 md:w-200 text-xl md:text-7xl bg-(--dark-green)/90 pr-6 md:pr-12 py-2 md:py-5 rounded-l-lg"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
             cafe grenouille
           </motion.p>
           <motion.p
-            className="text-xs md:text-3xl w-2/3 text-right md:w-full mt-2 md:mt-4 mr-2 md:mr-12"
+            className="w-2/3 md:w-full text-xs md:text-3xl text-right mt-2 md:mt-4 mr-2 md:mr-12"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
@@ -44,7 +44,7 @@ const Home: React.FC = () => {
 
         <motion.div
           id="menu"
-          className="mt-4 md:mt-16 sm:w-full flex flex-col-reverse md:flex-row justify-between items-center gap-4"
+          className="sm:w-full flex flex-col-reverse md:flex-row justify-between items-center mt-4 md:mt-16 gap-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
           ></motion.div>
 
           <motion.div
-            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--green) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
+            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--off-white) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
@@ -82,14 +82,14 @@ const Home: React.FC = () => {
 
         <motion.div
           id="hours"
-          className="mt-4 md:mt-16 sm:w-full flex flex-col md:flex-row justify-between items-center gap-4"
+          className="mt-4 sm:w-full flex flex-col md:flex-row justify-between items-center gap-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
           <motion.div
-            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--yellow) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
+            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--green) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -118,8 +118,8 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
           ></motion.div>
         </motion.div>
+
         <motion.div
-          id="reviews"
           className="justify-center md:flex"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +154,7 @@ const Home: React.FC = () => {
             ].map((review, index) => (
               <motion.div
                 key={index}
-                className="md:w-1/3 flex flex-col items-center justify-evenly text-(--green-accent) hover:text-black border border-(--green-accent) px-4 py-6 hover:bg-(--yellow) cursor-pointer rounded-2xl"
+                className="group md:w-1/3 flex flex-col items-center justify-evenly text-white hover:text-black border-2 border-(--dark-green) px-4 py-6 bg-(--dark-green)/20 hover:bg-(--green) cursor-pointer rounded-2xl filter"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -165,11 +165,11 @@ const Home: React.FC = () => {
                 </p>
                 <img
                   src={review.logo}
-                  className={`mt-4 ${
+                  className={`mt-4 transition-all duration-300 ${
                     review.logo.includes("globe")
                       ? "h-4 md:h-5"
                       : "w-22 md:2-26"
-                  }`}
+                  } invert group-hover:filter-none`}
                 />
               </motion.div>
             ))}

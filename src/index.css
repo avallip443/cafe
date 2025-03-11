@@ -8,9 +8,11 @@
   font-weight: 400;
 
   color: rgba(255, 255, 255, 0.87);
-  background-color: #F7F0DE;
-  --green: #D6DF86;
-  --green-accent: #3E8340;
+  /*background-color: #F7F0DE;*/
+  background-color: #0C1618;
+  --green: #A1C4B7;
+  --dark-green: #003D3A;
+  --off-white: #EBF1CF;
   --yellow: #F9D86D;
   --beige: #F7F0DE;
 
