@@ -27,7 +27,7 @@ const Menu = () => {
         className="absolute top-700 left-3 -z-10 w-96"
       />
 
-      <h1 className="text-xl md:text-3xl font-bold mb-4 py-2 bg-(--yellow) text-black">
+      <h1 className="text-xl md:text-3xl font-bold mb-4 py-2 bg-(--yellow) text-black rounded-2xl">
         brunch
       </h1>
       {MenuList.brunch.map((section, index) => (
@@ -47,21 +47,21 @@ const Menu = () => {
         </div>
       ))}
 
-      <h1 className="text-xl md:text-3xl font-bold mt-8 py-2 bg-(--yellow) text-black">
+      <h1 className="text-xl md:text-3xl font-bold mt-8 py-2 bg-(--yellow) text-black rounded-2xl">
         pastries
       </h1>
       {MenuList.pastries.map((item, idx) => (
         <MenuItemCard key={idx} item={item} />
       ))}
 
-      <h1 className="text-xl md:text-3xl font-bold mt-8 py-2 bg-(--yellow) text-black">
+      <h1 className="text-xl md:text-3xl font-bold mt-8 py-2 bg-(--yellow) text-black rounded-2xl">
         drinks
       </h1>
       {MenuList.drinks.map((item, idx) => (
         <MenuItemCard key={idx} item={item} />
       ))}
 
-      <h1 className="text-xl md:text-3xl font-bold mt-8 py-2 bg-(--yellow) text-black">
+      <h1 className="text-xl md:text-3xl font-bold mt-8 py-2 bg-(--yellow) text-black rounded-2xl">
         weekly specials
       </h1>
       <p className="text-gray-600 text-xs md:text-sm mt-4">
