@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import MenuList from "../utils/menu.json";
 
@@ -34,7 +33,11 @@ const Menu = () => {
         <div key={index}>
           <p className="italic text-gray-600 mb-2">{section.times}</p>
 
-          {["starters", "salads", "mains", "sides"].map((category) => (
+          {(
+            ["starters", "salads", "mains", "sides"] as Array<
+              keyof typeof section
+            >
+          ).map((category) => (
             <div key={category}>
               <h2 className="text-lg md:text-2xl font-semibold mt-5 text-(--green-accent)">
                 {category}
