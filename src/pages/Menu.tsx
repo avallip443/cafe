@@ -13,7 +13,7 @@ type MenuItem = {
 
 const Menu = () => {
   return (
-    <div className="p-6 max-w-3xl mx-auto">
+    <div className="p-6 mt-12 max-w-3xl mx-auto">
       <img
         src="/designs/coffee_cup_decal.png"
         className="absolute top-100 left-3 -translate-y-1/2 -z-10 w-96"
@@ -94,7 +94,7 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => (
     )}
     {item.add_ons && (
       <p className="text-xs md:text-sm italic text-blue-600">
-        Add-ons:{" "}
+        add-ons:{" "}
         {Object.entries(item.add_ons)
           .map(([addon, price]) => `${addon} +$${price}`)
           .join(", ")}
