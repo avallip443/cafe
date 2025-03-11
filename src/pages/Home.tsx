@@ -51,7 +51,7 @@ const Home: React.FC = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-cover bg-center rounded-2xl"
+            className="h-64 md:h-135 w-[88vw] md:w-1/2 bg-cover bg-center rounded-2xl"
             style={{
               backgroundImage: `url(/images/brunch_${currentIndex}.png)`,
             }}
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
           ></motion.div>
 
           <motion.div
-            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--off-white) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
+            className="h-64 md:h-135 w-[88vw] md:w-1/2 bg-(--off-white) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-(--off-white) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
+            className="h-64 md:h-135 w-[88vw] md:w-1/2 bg-(--off-white) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -108,7 +108,7 @@ const Home: React.FC = () => {
           </motion.div>
 
           <motion.div
-            className="h-64 md:h-150 w-[88vw] md:w-1/2 bg-cover bg-center rounded-2xl"
+            className="h-64 md:h-135 w-[88vw] md:w-1/2 bg-cover bg-center rounded-2xl"
             style={{
               backgroundImage: `url(/images/coffee_${currentIndex}.png)`,
             }}
@@ -154,7 +154,7 @@ const Home: React.FC = () => {
             ].map((review, index) => (
               <motion.div
                 key={index}
-                className="group md:w-1/3 flex flex-col items-center justify-evenly text-white hover:text-black border-2 border-(--dark-green) px-4 py-6 bg-(--dark-green)/20 hover:bg-(--green) cursor-pointer rounded-2xl filter"
+                className="group md:w-1/3 flex flex-col items-center justify-evenly text-white hover:text-black border-2 border-(--dark-green) px-4 py-6 bg-(--dark-green)/20 hover:bg-(--green) cursor-pointer rounded-2xl filter transition-all duration-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
