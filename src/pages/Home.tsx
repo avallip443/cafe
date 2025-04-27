@@ -15,43 +15,49 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full p-4 pt-0 flex justify-center overflow-hidden">
-      <div className="max-w-6xl flex flex-col items-center justify-center">
+    <div className="flex justify-center w-full p-4 pt-0 overflow-hidden">
+      <div className="flex flex-col items-center justify-center max-w-6xl">
         <motion.div
           id="landing-image"
-          className="w-screen h-82 md:h-screen flex flex-col justify-end items-end bg-cover bg-center bg-[url('/images/cafe_landing1.jpg')] pb-4 md:pb-16"
+          className="relative flex flex-col justify-end items-center w-screen h-82 md:h-screen bg-[url('/images/cafe_landing1.png')] bg-cover bg-center pb-4 md:pb-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <motion.p
-            className="w-70 md:w-200 text-2xl md:text-7xl bg-(--dark-green)/90 pr-6 md:pr-12 py-2 md:py-5 rounded-l-lg"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            cafe grenouille
-          </motion.p>
-          <motion.p
-            className="w-3/4 md:w-full text-md md:text-3xl text-right mt-2 md:mt-4 mr-10 md:mr-12"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-          >
-            a slice of paris in the heart of toronto
-          </motion.p>
+          <div
+            id="overlay"
+            className="absolute inset-0 bg-(--dark-green)/35 z-0"
+          />
+          <div className="flex w-9/10 md:w-full">
+            <motion.h1
+              className="relative z-10 w-9/10 md:w-4/5 text-5xl md:text-[12rem] text-white text-left font-semibold leading-none md:pl-9"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              cafe grenouille
+            </motion.h1>
+            <motion.p
+              className="relative hidden md:block text-md md:text-[72px] font-semibold text-right text-white leading-tight [text-shadow:0.1px_0.1px_0_black,-0.1px_0.1px_0_black,0.1px_-0.1px_0_black,-0.1px_-0.1px_0_black]  pr-6 md:pr-9"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.2 }}
+            >
+              a slice of paris in the heart of toronto
+            </motion.p>
+          </div>
         </motion.div>
 
         <motion.div
-          id="menu"
-          className="sm:w-full flex flex-col-reverse md:flex-row justify-between items-center mt-4 md:mt-16 gap-4"
+          id="info"
+          className="flex flex-col-reverse md:flex-row justify-between items-center sm:w-full mt-12 md:mt-40 gap-6"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
           <motion.div
-            className="h-64 md:h-135 w-[88vw] md:w-1/2 bg-cover bg-center rounded-2xl"
+            className="w-[88vw] md:w-3/5 h-64 md:h-135 bg-cover bg-center rounded-2xl"
             style={{
               backgroundImage: `url(/images/brunch_${currentIndex}.png)`,
             }}
@@ -62,53 +68,55 @@ const Home: React.FC = () => {
           ></motion.div>
 
           <motion.div
-            className="h-64 md:h-135 w-[88vw] md:w-1/2 bg-(--off-white) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
+            className="flex flex-col justify-center items-center w-[88vw] md:w-2/5 h-64 md:h-135 bg-(--green) rounded-2xl text-black p-12"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <h5 className="text-xl md:text-2xl font-semibold mb-6">
+            <h5 className="text-3xl md:text-6xl font-semibold mb-6">
               cafe grenouille
             </h5>
-            <p className="mb-4 text-sm md:text-lg">
-              123 react rd, toronto, canada
+            <p className="text-md md:text-2xl mb-4">
+              489 cappuccino st, toronto
             </p>
-            <p className="font-medium underline text-sm md:text-lg">
+            <p className="text-md md:text-2xl font-medium underline">
               tuesday to sunday, 8am-4pm
             </p>
           </motion.div>
         </motion.div>
 
         <motion.div
-          id="hours"
-          className="mt-4 sm:w-full flex flex-col md:flex-row justify-between items-center gap-4"
+          id="menu"
+          className="flex flex-col md:flex-row justify-between items-center sm:w-full gap-6 mt-6 mb-12 md:mb-40"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
           <motion.div
-            className="h-64 md:h-135 w-[88vw] md:w-1/2 bg-(--off-white) text-black flex flex-col justify-center items-center p-12 rounded-2xl"
+            className="flex flex-col justify-center items-center w-[88vw] md:w-2/5 h-64 md:h-135 bg-(--off-white) rounded-2xl text-black p-12"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h5 className="text-xl md:text-2xl font-semibold mb-6">menu</h5>
-            <p className="mb-4 text-sm md:text-lg">
+            <h5 className="text-3xl md:text-6xl font-semibold mb-6">menu</h5>
+            <p className="text-md md:text-2xl mb-4">
               visit us in person and discover our weekly special!
             </p>
-            <a
-              href="/menu"
-              className="underline font-medium hover:font-bold text-sm md:text-lg"
-            >
-              view our cafe and brunch menu
-            </a>
+            <p>
+              <a
+                href="/menu"
+                className="text-md md:text-2xl font-medium hover:font-bold underline"
+              >
+                view cafe and brunch menu
+              </a>
+            </p>
           </motion.div>
 
           <motion.div
-            className="h-64 md:h-135 w-[88vw] md:w-1/2 bg-cover bg-center rounded-2xl"
+            className="w-[88vw] md:w-3/5 h-64 md:h-135 bg-cover bg-center rounded-2xl"
             style={{
               backgroundImage: `url(/images/coffee_${currentIndex}.png)`,
             }}
@@ -120,7 +128,7 @@ const Home: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="justify-center md:flex"
+          className="md:flex justify-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -131,13 +139,13 @@ const Home: React.FC = () => {
 
         <motion.div
           id="reviews"
-          className="justify-center md:flex"
+          className="md:flex justify-center my-12 md:my-30"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col md:flex-row text-black md:h-64 w-[88vw] md:w-full gap-3">
+          <div className="flex flex-col md:flex-row w-[88vw] md:w-full md:h-64 text-black gap-3">
             {[
               {
                 text: `"Cafe Grenouille is an absolute gem in the heart of Toronto!"`,
@@ -154,13 +162,13 @@ const Home: React.FC = () => {
             ].map((review, index) => (
               <motion.div
                 key={index}
-                className="group md:w-1/3 flex flex-col items-center justify-evenly text-white hover:text-black border-2 border-(--dark-green) px-4 py-6 bg-(--dark-green)/20 hover:bg-(--green) cursor-pointer rounded-2xl filter transition-all duration-300"
+                className="group flex flex-col items-center justify-evenly md:w-1/3 text-white hover:text-black bg-(--dark-green)/20 hover:bg-(--green) rounded-2xl border-2 border-(--dark-green) px-4 py-6 cursor-pointer filter transition-all duration-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <p className="text-sm md:text-lg font-semibold">
+                <p className="text-md md:text-2xl font-semibold">
                   {review.text}
                 </p>
                 <img

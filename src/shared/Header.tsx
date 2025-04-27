@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Bars3Icon } from "@heroicons/react/16/solid";
 
 const Header: React.FC = () => {
   const [hidden, setHidden] = useState(false);
@@ -19,22 +18,21 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
     <nav
-      className={`fixed w-full top-0 z-50 bg-black/40 flex justify-center transition-transform duration-300 shadow-md 
+      className={`fixed w-full top-0 z-50 bg-black/70 flex justify-center transition-transform duration-300 shadow-md 
         ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="w-full flex justify-between items-center py-2 px-6">
-        <div>
-          <Bars3Icon
-            className="w-6 md:w-8"
+        <a href="/">
+          <img
+            src="/logos/cafe-logo-white.png"
+            alt="Cafe Logo"
+            className="w-10 md:w-18"
           />
-        </div>
+        </a>
         <div className="w-auto">
-          <ul
-            className="flex font-semibold justify-between gap-12 text-sm md:text-xl"
-          >
+          <ul className="flex  justify-between gap-12 text-sm md:text-2xl">
             <li className="md:px-3 hover:text-(--green)">
               <a href="/">home</a>
             </li>

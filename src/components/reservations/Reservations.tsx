@@ -3,7 +3,7 @@ import React from "react";
 const About: React.FC = () => {
   return (
     <div className="w-screen flex justify-center">
-      <div className="my-25 flex justify-center items-center w-full">
+      <div className="flex justify-center items-center w-full">
         <div className="w-full bg-(--dark-green)/60 text-black flex flex-col items-center py-24 text-white">
           <h4 className="text-2xl mb-4 font-bold">reservations</h4>
           <p className="w-4/5">book a table or join the waitlist</p>

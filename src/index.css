@@ -1,17 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import "tailwindcss";
 
 :root {
-  font-family: 'IBM Plex Mono', Arial, sans-serif;
+  --font-primary: "IBM Plex Mono", Arial, sans-serif;
+  --font-secondary: "IBM Plex Sans Condensed", serif;
+
+  font-family: var(--font-primary);
   line-height: 1.5;
   font-weight: 400;
 
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0C1618;
-  --green: #A1C4B7;
-  --dark-green: #003D3A;
-  --off-white: #EBF1CF;
+  background-color: #0c1618;
+  --green: #a1c4b7;
+  --dark-green: #003d3a;
+  --off-white: #ebf1cf;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,4 +29,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+p {
+  font-family: var(--font-secondary);
 }
